@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link href="output.css" rel="stylesheet">
+  <title>Responsive Dashboard</title>
+</head>
+<body class="bg-gray-100">
+
+  <!-- making a nav Yaha se  -->
+  <div class="md:hidden flex items-center justify-between bg-gray-900 text-white px-4 py-3">
+    <h1 class="text-xl font-semibold">My Dashboard</h1>
+
+    <!-- ye Hamburger wala part -->
+    <button id="menuBtn" class="text-white text-2xl">
+      ☰
+    </button>
+  </div>
+
+
+  <div class="flex">
+
+    <!-- ye SIDEBAR  hai -->
+    <aside id="sidebar"
+      class="w-64 bg-gray-900 text-white min-h-screen p-6 space-y-4
+             fixed md:static inset-y-0 left-0 transform -translate-x-full md:translate-x-0
+             transition-transform duration-300 z-50">
+
+      <div class="bg-gray-700 p-4 rounded-lg mb-6 flex items-center gap-3">
+        <div class="w-14 h-14 bg-gray-600 rounded-full flex items-center justify-center">
+          <svg class="w-8 h-8 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+          </svg>
+        </div>
+        <p class="text-gray-200 font-medium">User-Name</p>
+      </div>
+
+      <h2 class="text-2xl font-bold mb-6">Sidebar</h2>
+
+      <nav class="space-y-3">
+        <a href="#" class="block p-2 rounded hover:bg-gray-700 transition">Dashboard</a>
+        <a href="#" class="block p-2 rounded hover:bg-gray-700 transition">Users</a>
+      </nav>
+
+      <div class="absolute bottom-6 left-6 right-6 space-y-2">
+        <a href="#" class="block p-2 rounded hover:bg-gray-700 transition">Settings</a>
+        <a href="login.html" class="block p-2 rounded hover:bg-gray-700 transition">Logout</a>
+      </div>
+    </aside>
+  
+    <!--apna  MAIN CONTENT/Hero section hai yaha se -->
+    <main class="flex-1 p-8">
+      <h1 class="text-3xl font-bold text-gray-800 mb-2"> <span></span>Dashboard</h1>
+      <p class="text-gray-600 mb-8">This is where you check your growth.</p>
+
+      <!-- Cards Grid ka box  -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-200 hover:shadow-md transition">
+          <h2 class="text-xl font-semibold text-gray-800 mb-3">Total Users</h2>
+          <p class="text-gray-600 mb-4">Track your user growth and engagement metrics across all platforms.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-3xl font-bold text-gray-900">1,234</span>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-200 hover:shadow-md transition">
+          <h2 class="text-xl font-semibold text-gray-800 mb-3">Revenue</h2>
+          <p class="text-gray-600 mb-4">Monitor your revenue streams and financial performance in real-time.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-3xl font-bold text-gray-900">$45.2K</span>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">
+              View Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-200 hover:shadow-md transition">
+          <h2 class="text-xl font-semibold text-gray-800 mb-3">Orders</h2>
+          <p class="text-gray-600 mb-4">Keep track of all orders and manage your fulfillment process efficiently.</p>
+          <div class="flex justify-between items-center">
+            <span class="text-3xl font-bold text-gray-900">567</span>
+            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">
+              View Details
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Recent Activity Section -->
+      <div class="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-8">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-6">Recent Activity</h2>
+        <div class="space-y-4">
+          <div class="flex items-center justify-between py-3 border-b border-gray-100">
+            <div>
+              <span class="text-gray-800 font-medium">New user registered</span>
+              <p class="text-gray-500 text-sm">John Doe joined the platform</p>
+            </div>
+            <span class="text-gray-500 text-sm">2 hours ago</span>
+          </div>
+          <div class="flex items-center justify-between py-3 border-b border-gray-100">
+            <div>
+              <span class="text-gray-800 font-medium">Order #1234 completed</span>
+              <p class="text-gray-500 text-sm">Successfully delivered to customer</p>
+            </div>
+            <span class="text-gray-500 text-sm">5 hours ago</span>
+          </div>
+          <div class="flex items-center justify-between py-3">
+            <div>
+              <span class="text-gray-800 font-medium">Payment received</span>
+              <p class="text-gray-500 text-sm">Invoice #5678 paid in full</p>
+            </div>
+            <span class="text-gray-500 text-sm">1 day ago</span>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    
+  </div>
+  <!-- yaha se apna footer part -->
+  <footer class="footer sm:footer-horizontal  bg-gray-900 text-neutral-content grid-rows-2 mt-1 p-10">
+  <nav>
+    <h6 class="footer-title">Services</h6>
+    <a class="link link-hover">Branding</a>
+    <a class="link link-hover">Design</a>
+    <a class="link link-hover">Marketing</a>
+    <a class="link link-hover">Advertisement</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Company</h6>
+    <a class="link link-hover">About us</a>
+    <a class="link link-hover">Contact</a>
+    <a class="link link-hover">Jobs</a>
+    <a class="link link-hover">Press kit</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Legal</h6>
+    <a class="link link-hover">Terms of use</a>
+    <a class="link link-hover">Privacy policy</a>
+    <a class="link link-hover">Cookie policy</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Social</h6>
+    <a class="link link-hover">Twitter</a>
+    <a class="link link-hover">Instagram</a>
+    <a class="link link-hover">Facebook</a>
+    <a class="link link-hover">GitHub</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Explore</h6>
+    <a class="link link-hover">Features</a>
+    <a class="link link-hover">Enterprise</a>
+    <a class="link link-hover">Security</a>
+    <a class="link link-hover">Pricing</a>
+  </nav>
+  <nav>
+    <h6 class="footer-title">Apps</h6>
+    <a class="link link-hover">Mac</a>
+    <a class="link link-hover">Windows</a>
+    <a class="link link-hover">iPhone</a>
+    <a class="link link-hover">Android</a>
+  </nav>
+</footer>
+
+ <-- js ka scipt for sidebar toggle hai ye -->
+  <script>
+    const btn = document.getElementById("menuBtn");
+    const sidebar = document.getElementById("sidebar");
+
+    btn.addEventListener("click", () => {
+      sidebar.classList.toggle("-translate-x-full");
+    });
+  </script>
+
+</body>
+</html>
